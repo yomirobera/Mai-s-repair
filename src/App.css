@@ -1,0 +1,78 @@
+/* Add this to navbar.css */
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation bar styles */
+.navbar {
+  background-color: #333; /* Dark background color */
+  overflow: hidden;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #ddd; /* Darken background color on hover */
+  color: black;
+}
+
+/* Hamburger icon */
+.navbar .hamburger {
+  display: none;
+}
+
+/* Hide navigation links by default */
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 600px) {
+  /* Show hamburger icon on small screens */
+  .navbar .hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  /* Hide navigation links on small screens */
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 55px; /* Adjust as needed */
+    left: 0;
+    background-color: #333;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar ul li a {
+    color: white;
+  }
+}
